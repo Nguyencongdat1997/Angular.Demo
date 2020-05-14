@@ -1,9 +1,16 @@
 {
-    "MENU_ITEM": {
-      "ACCOUNT_MANAGE": "Account Management",
-      "CART_MANAGE": "Cart Management",
-      "CATALOG_MANAGE": "Catalog Management",
-      "GROUP_BUYING_MANAGE": "GroupBuying Management",
-      "HOME": "Home"
-    }
+  "MENU_ITEM": {
+    "ACCOUNT_MANAGE": "Account Management",
+    "CART_MANAGE": "Cart Management",
+    "CATALOG_MANAGE": "Catalog Management",
+    "GROUP_BUYING_MANAGE": "GroupBuying Management",
+    "HOME": "Home"
+  },
+  "HEADER": {
+    "HOME_SERVICE": "Home",
+    "CATALOG_SERVICE": "Catalog",
+    "GROUPBUY_SERVICE": "Group Buy",
+    "CART_SERVICE": "Cart",
+    "ACCOUNT_SERVICE": "Account"
+  }
 }

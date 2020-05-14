@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import * as lang_en from '../../../../assets/i18n/en.json';
+import * as lang_vi from '../../../../assets/i18n/vi.json';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -13,23 +16,23 @@ export class HeaderComponent implements OnInit {
   constructor(private router: Router) {
     this.navLinks = [
       {
-        label: 'Home',
+        label: lang_en.HEADER.HOME_SERVICE,
         path: 'home',
         index: 0
       }, {
-        label: 'Catalog',
+        label: lang_en.HEADER.CATALOG_SERVICE,
         path: 'catalog',
         index: 1
       }, {
-        label: 'Group Buy',
+        label: lang_en.HEADER.GROUPBUY_SERVICE,
         path: 'group-buying',
         index: 2
       }, {
-        label: 'Cart',
+        label: lang_en.HEADER.CART_SERVICE,
         path: 'cart',
         index: 3
       }, {
-        label: 'Account',
+        label: lang_en.HEADER.ACCOUNT_SERVICE,
         path: 'account',
         index: 4
       }
