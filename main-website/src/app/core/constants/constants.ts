@@ -46,7 +46,7 @@ export const MenuItems: MenuItem[] = [
     {
         icon: 'group-buy-manage',
         iconAsset: '../../../assets/icon-svg/image-alt.svg',
-        route: 'group',
+        route: 'group-buying',
         title: lang_en.MENU_ITEM.GROUP_BUYING_MANAGE,
         hasChildRoute: false,
     }

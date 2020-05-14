@@ -10,14 +10,15 @@
             </div>
             <mat-accordion>
                 <mat-nav-list disableRipple>
-                    <mat-expansion-panel (opened)="item.panelOpenState = true"
+                    <mat-expansion-panel class="menu-list"
+                        (opened)="item.panelOpenState = true"
                         (closed)="item.panelOpenState = false" *ngFor="let item of menuItems"
                         [hideToggle]="!item.hasChildRoute || !isExpanded" 
                         matRipple [matRippleDisabled]="item.panelOpenState">
                         <mat-expansion-panel-header [expandedHeight]="'48px'">
                             <mat-panel-title>
-                                <a routerLinkActive="menu-item-active" fxLayout='row'
-                                    fxLayoutAlign="start center" fxLayoutGap="10px">
+                                <a class="menu-item-link" routerLink="{{item.route}}" routerLinkActive="menu-item-active" 
+                                    fxLayout='row' fxLayoutAlign="start center" fxLayoutGap="10px">
                                     <mat-icon svgIcon="{{item.icon}}" 
                                       [matTooltip]="isExpanded ? '' : (item.title )">
                                     </mat-icon>
@@ -27,7 +28,7 @@
                                 </a>
                             </mat-panel-title>
                         </mat-expansion-panel-header>
-                        <a *ngFor="let childItem of item.childRoute" disableRipple mat-list-item
+                        <a class="menu-item-link" *ngFor="let childItem of item.childRoute" disableRipple mat-list-item
                             [routerLink]="[childItem.route]" routerLinkActive="menu-item-active"
                             matRipple>
                             <div fxLayout='row' fxLayoutAlign="start center" 
