@@ -1,9 +1,16 @@
 {
-    "MENU_ITEM": {
-      "ACCOUNT_MANAGE": "Quản lý tài khoản",
-      "CART_MANAGE": "Quản lý giỏ hàng",
-      "CATALOG_MANAGE": "Quản lý sản phẩm",
-      "GROUP_BUYING_MANAGE": "Quản lý mua chung",
-      "HOME": "Trang chủ"
-    }
+  "MENU_ITEM": {
+    "ACCOUNT_MANAGE": "Quản lý tài khoản",
+    "CART_MANAGE": "Quản lý giỏ hàng",
+    "CATALOG_MANAGE": "Quản lý sản phẩm",
+    "GROUP_BUYING_MANAGE": "Quản lý mua chung",
+    "HOME": "Trang chủ"
+  },
+  "HEADER": {
+    "HOME_SERVICE": "Trang chủ",
+    "CATALOG_SERVICE": "Sản phẩm",
+    "GROUPBUY_SERVICE": "Mua chung",
+    "CART_SERVICE": "Giỏ hàng",
+    "ACCOUNT_SERVICE": "Tài khoản"
+  }
 }
