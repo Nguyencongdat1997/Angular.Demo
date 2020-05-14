@@ -1,0 +1,9 @@
+{
+    "MENU_ITEM": {
+      "ACCOUNT_MANAGE": "Quản lý tài khoản",
+      "CART_MANAGE": "Quản lý giỏ hàng",
+      "CATALOG_MANAGE": "Quản lý sản phẩm",
+      "GROUP_BUYING_MANAGE": "Quản lý mua chung",
+      "HOME": "Trang chủ"
+    }
+}

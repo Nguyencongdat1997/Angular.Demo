@@ -1,2 +1,50 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<div class="main-component">
+    <mat-sidenav-container class= "custom-mat-sidenav-container" autosize>
+        <mat-sidenav mode="side" opened="true" [ngClass]="{ 'isExpanded': isExpanded }">
+            <div class="menu-header" fxLayout='row' fxLayoutAlign="start start">
+                <button class="menu-header-icon" mat-icon-button (click)="isExpanded = !isExpanded">
+                    <mat-icon svgIcon="menu" >
+                    </mat-icon>
+                </button>  
+                <span class="menu-header-title" *ngIf="isExpanded">Menu</span>         
+            </div>
+            <mat-accordion>
+                <mat-nav-list disableRipple>
+                    <mat-expansion-panel (opened)="item.panelOpenState = true"
+                        (closed)="item.panelOpenState = false" *ngFor="let item of menuItems"
+                        [hideToggle]="!item.hasChildRoute || !isExpanded" 
+                        matRipple [matRippleDisabled]="item.panelOpenState">
+                        <mat-expansion-panel-header [expandedHeight]="'48px'">
+                            <mat-panel-title>
+                                <a routerLinkActive="menu-item-active" fxLayout='row'
+                                    fxLayoutAlign="start center" fxLayoutGap="10px">
+                                    <mat-icon svgIcon="{{item.icon}}" 
+                                      [matTooltip]="isExpanded ? '' : (item.title )">
+                                    </mat-icon>
+                                    <div fxLayout='row' fxLayoutAlign="start center">
+                                        <span *ngIf="isExpanded">{{item.title }}</span>
+                                    </div>
+                                </a>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <a *ngFor="let childItem of item.childRoute" disableRipple mat-list-item
+                            [routerLink]="[childItem.route]" routerLinkActive="menu-item-active"
+                            matRipple>
+                            <div fxLayout='row' fxLayoutAlign="start center" 
+                                fxLayoutGap="10px" class="menu-child-item">
+                                <span *ngIf="isExpanded">{{childItem.title}}</span>
+                            </div>
+                        </a>
+                    </mat-expansion-panel>
+                </mat-nav-list>
+            </mat-accordion>
+        </mat-sidenav>
+
+        <mat-sidenav-content fxLayout="column">
+            <app-header></app-header>
+            <div>
+                <router-outlet></router-outlet>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
