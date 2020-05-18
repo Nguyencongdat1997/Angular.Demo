@@ -4,9 +4,10 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { HeaderInterceptor } from './interceptors/header.interceptor';
 import { ErrorInterceptor } from './interceptors/error.interceptor';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [NotFoundComponent],
   imports: [
     CommonModule
   ],
