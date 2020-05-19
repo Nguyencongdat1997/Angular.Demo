@@ -20,7 +20,7 @@
                                 <a class="menu-item-link" routerLink="{{item.route}}" routerLinkActive="menu-item-active" 
                                     fxLayout='row' fxLayoutAlign="start center" fxLayoutGap="10px">
                                     <mat-icon svgIcon="{{item.icon}}" 
-                                      [matTooltip]="isExpanded ? '' : (item.title )">
+                                      [matTooltip]="item.title">
                                     </mat-icon>
                                     <div fxLayout='row' fxLayoutAlign="start center">
                                         <span *ngIf="isExpanded">{{item.title }}</span>

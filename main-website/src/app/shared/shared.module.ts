@@ -5,6 +5,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { MaterialModule } from './material/material.module';
 import { HeaderComponent } from './components/header/header.component';
+import { SafePipe } from './pipes/safe.pipe';
 
 const directives = [
 ];
@@ -18,6 +19,7 @@ const componentsExport = [
 ];
 
 const pipes = [
+  SafePipe
 ];
 
 @NgModule({
